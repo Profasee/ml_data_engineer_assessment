@@ -1,0 +1,41 @@
+services:
+  database:
+    image: mysql:8.0
+    command:
+      - "--default-authentication-plugin=mysql_native_password"
+    environment:
+      MYSQL_DATABASE: datatestdb
+      MYSQL_USER: datatest
+      MYSQL_PASSWORD: alligator
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+    - ./mysql-schemas:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+    restart: always
+
+  # database-pg:
+  #   image: postgres:14
+  #   environment:
+  #     POSTGRES_DB: testdb
+  #     POSTGRES_USER: datatest
+  #     POSTGRES_PASSWORD: crocodile
+  #   ports:
+  #     - 5432:5432
+  #   restart: always
+  
+  assessment:
+    build: .
+    command: ["python", "run.py"]
+    volumes:
+      - ./data:/data
+    depends_on:
+      - database
+
+  test:
+    build: .
+    command: ["python", "test.py"]
+    volumes:
+      - ./data:/data
+    depends_on:
+      - database

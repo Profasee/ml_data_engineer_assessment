@@ -27,18 +27,21 @@ The assessment test consists of a series of small tasks to demonstrate your abil
 
 Fork the git repo to your own Github account and complete the following tasks:
 
-1. Download the CSV hosted at https://profasee-data-engineer-assessment-api.onrender.com/people.csv and store in the `/data` directory.
-2. Load the file from the `/data` directory and convert the CSV to JSON.
-3. Inspect the data and list ways that the data can be cleaned up before being stored for a data science team to use. Write the code to peform at least two types of the cleaning.
-4. Write unit tests to show the data cleaning functions work as expected.
-5. Create a function to filter people who have no interests.
-6. Design a database schema to hold the data for the people in the CSV. Store this schema in the `mysql-schemas` directory.
-7. Load the data from people.csv into the database schemas you have designed.
-8. Create a function that uses the database tables to return the following stats of the people data:
+1. Download the CSV hosted at https://profasee-data-engineer-assessment-api.onrender.com/people.csv:
+* Store the raw data in the `/data` directory.
+* Convert the CSV to JSON format and store in the `/data` directory.
+2. Inspect the data and list ways that the data can be cleaned up before being stored for a data science team to use.
+* Write code to peform at least two types of the cleaning.
+* Write unit tests to show the data cleaning functions work as expected.
+* Write a function to filter people who have no interests.
+3. Design a database schema to hold the data for the people in the CSV.
+* Store the schema file in the `mysql-schemas` directory. These will be applied when the database container is created.
+* Write code to load the data from the CSV into the database.
+4. Create a function that uses the database tables to return the following stats of the people data:
 * The minimum, maximum, and average age
 * The city with the most people
 * The top 5 most common interests
-9. Bonus: Create an API that serves an endpoint to return the data in Task 8.
+5. Bonus: Create an API that serves an endpoint to return the data in Task 8.
 
 
 Share a link to the cloned github repo with the completed tasks so we can review your code ahead of your interview.

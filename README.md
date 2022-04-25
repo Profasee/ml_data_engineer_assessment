@@ -41,7 +41,7 @@ Fork the git repo to your own Github account and complete the following tasks:
 * The minimum, maximum, and average age
 * The city with the most people
 * The top 5 most common interests
-5. Bonus: Create an API that serves an endpoint to return the data in Task 8.
+5. Bonus: Create an API that serves an endpoint to return the data in Task 5.
 
 
 Share a link to the cloned github repo with the completed tasks so we can review your code ahead of your interview.
